@@ -1,0 +1,381 @@
+/*
+ * CSS Reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+nav li {
+  font-family: "Kulim Park", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* Header */
+header {
+  position: relative;
+  padding: 60px 0;  /*top,bottom = 60px, left,right = 0 */
+  min-height: 50vh;
+  text-align: center;
+  background-image: url("img/home_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 100vw 100vh rgba(94, 161, 161, 0.068); 
+}
+
+header h1 {
+  color: #cbeff1d2;
+  line-height: 1.1;
+}
+
+.house {
+  position: absolute;
+  max-height: 48vh;
+  max-width: 25vw;
+  bottom: 1vh;
+}
+
+.header-logo {
+  height: 60px;
+  transition: all 450ms ease-in 80ms;
+  transform: translate(0, 0);
+}
+
+.header-logo:hover {
+  transform: translate(8vw, -300%) scale(0.6);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation: fadeIn) {
+  header p {
+    opacity: 1;
+    transform: translateY(25%);
+    animation: fadeIn 450ms ease-in 300ms forwards;
+    animation-delay: 1000ms;
+  }
+}
+
+/* Main Content */
+main {
+  color: #767676;
+}
+
+#about {
+  background-image: url(img/about_plane.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+
+@media (max-width: 800px) {
+  #about {
+    background-position: right top;
+    background-size: 25vw auto;
+    padding-top: 60px;
+  }
+
+  #about .max-line-length {
+    max-width: 50ch;
+  }
+}
+
+#tours {
+  background-image: linear-gradient(
+      -20deg,
+      rgba(11, 82, 100, 0.5) 20%,
+      rgba(69, 111, 114, 0.9) 100%
+    ), 
+    url(img/tour_sand.jpeg);
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  #tours .flexbox {
+    flex-wrap: wrap;
+  }
+
+  #tours .card {
+    flex-basis: 100%;
+  }
+
+  #tours .card + .card {
+    margin-top: 2em;
+  }
+}
+
+/* Navigation Component */
+nav {
+  background: rgba(131, 168, 180, 0.95);
+  padding: 0.25em 0;
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  padding: 0 0.5em;
+}
+
+nav a {
+  color: #144405;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav ul li + li {
+  border-left: 1px solid #7a1b03;
+}
+
+/* Card Component */
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.18);
+  background-color: #fff;
+}
+
+.card__img {
+  background-repeat: no-repeat; /* To remove repeated background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 20vh; /* vh- view height */
+  border-radius: 8px 8px 0 0;
+  transition: box-shadow 80ms ease-in-out;
+  box-shadow: inset 0 0 30px 60px rgba(21, 15, 100, 0.3);
+}
+
+.card:hover .card__img {
+  box-shadow: inset 0 0 10px 10px rgba(21, 15, 100, 0.3);
+}
+
+.card__content {
+  padding: 24px;
+}
+
+.card h3 span {
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 0.05em 0.25em;
+  background-color: rgba(255, 124, 166, 0.4);
+  border-radius: 4px;
+}
+
+/* Component: Button */
+.button {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  background-color: #022e3f;
+  text-decoration: none;
+  font-weight: bold;
+  color: #cad4ce;
+  display: inline-block;
+  line-height: 1.1;
+  text-align: center;
+}
+
+button.button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Component: Form */
+
+form {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 60ch;
+}
+
+.form-field {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.form-field .button {
+  justify-self: start;
+}
+
+.form-input {
+  border: 1px solid #6075b0;
+  border-radius: 4px;
+  height: 2em;
+  padding: 0 0.5em;
+  font-size: 18px;
+}
+
+label {
+  color: #150f64;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Type Utilities */
+.lead {
+  font-size: 125%;
+  letter-spacing: 0.03em;
+}
+
+.max-line-length {
+  max-width: 60ch;  /* ch-character */
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Color Utilities */
+.background-dark {
+  background-color: #83989b;
+  color: #88a39f;
+}
+
+.background-black {
+  background-color: #082b42;
+  color: #ddd9ee;
+}
+
+.text-dark {
+  color: #022c2a;
+}
+
+.text-medium {
+  color: #45aaaa;
+}
+
+/* Utilities */
+
+.wrapper {
+  max-width: 1024px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* By default, flexbox are set along the horizontal flex line, from left to right */
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexbox--aligncenter {
+  align-items: center;  /* using in footer section */
+}
+
+/*  * - any child element of the flex container */
+.flexbox--3col > * {
+  flex: 0 1 30%;
+}
+
+/* v-vertical md-medium */
+.padding-v-md {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* v-vertical, lg-large */
+.padding-v-lg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* To remove margins from top and bottom paragraph - in footer */
+.margin-v-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* To add Margins ( v-vertical, lg-large )*/
+.margin-v-lg {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
