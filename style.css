@@ -280,7 +280,7 @@ form {
 }
 
 .form-input {
-  border: 1px solid #6075b0;
+  border: 1px solid #3c8865;
   border-radius: 4px;
   height: 2em;
   padding: 0 0.5em;
@@ -288,7 +288,7 @@ form {
 }
 
 label {
-  color: #150f64;
+  color: #053521;
   font-weight: bold;
   font-size: 18px;
 }
