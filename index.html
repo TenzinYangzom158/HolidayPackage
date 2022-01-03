@@ -5,10 +5,9 @@
     <title>Holiday Packages</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -44,6 +43,63 @@
           dolorum in quae perferendis et voluptas eveniet.
         </p>
       </section>
+
+      <section class="slider">
+        <div>
+          <img src="img/coorg.jpg">
+          <div class="desc">
+            <h2><span>Coorg</span></h2>
+            <p>$289.99 - $299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/meghalaya.jpg">
+          <div class="desc">
+            <h2><span>meghalaya</span> </h2>
+            <p>$299.99 - $329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/ooty.jpg">
+          <div class="desc">
+            <h2><span>ooty</span> </h2>
+            <p>$289.99 - $299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/dhasa.jpg">
+          <div class="desc">
+            <h2><span>dhasa</span> </h2>
+            <p>$299.99 - $329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/pondi.jpg">
+          <div class="desc">
+            <h2><span>pondi</span> </h2>
+            <p>$289.99 - $299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/goa.jpg">
+          <div class="desc">
+            <h2><span>goa</span></h2>
+            <p>$299.99 - $329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div> 
+      </section> 
+      <!--
 
       <section id="tours" class="padding-v-lg">
         <div class="wrapper center">
@@ -96,6 +152,8 @@
         </div>
       </section>
 
+    -->
+
     </main>
 
     <div class="background-black padding-v-md">
@@ -104,6 +162,37 @@
         <p class="margin-v-0">&copy; 2021 Holiday Package Tours</p>
       </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+    <script>
+      function createSlick(){  
+
+      $(".slider").not('.slick-initialized').slick({
+        centerMode: true,
+          autoplay: true,
+          dots: true, 
+            arrows: true,
+          slidesToShow: 3,
+          responsive: [{ 
+              breakpoint: 768,
+              settings: {
+                  dots: false,
+                  arrows: false,
+                  infinite: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              } 
+          }]
+      });	
+
+    } 
+    createSlick();
+
+    //Will not throw error, even if called multiple times.
+    $(window).on( 'resize', createSlick );
+
+    </script>
 
   </body>
 </html>

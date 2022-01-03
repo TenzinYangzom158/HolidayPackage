@@ -379,3 +379,163 @@ label {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+/* Slider */
+.slider h2, p {
+    margin: 30px 0 0;
+    padding: 0;
+} 
+.slider p {
+    color: #bf0606;
+}
+
+.slider {
+  max-width: 1000px;
+  width: 90%;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); 
+}
+
+.slick-slider button{ 
+  position: absolute;
+  top: 50%;
+  background: #fff;
+  border: none;
+  outline: none;
+  z-index:100;
+  width: 50px;
+  height: 50px; 
+  color:#fff;
+  cursor: pointer;
+  transform: translate(0%,-70%);
+  border-radius: 36px;
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.07);
+}
+.slick-slider .slick-prev{
+  left:-30px;
+}
+.slick-slider .slick-prev::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  font-size:30px;
+  color:#bf0606;
+  left: 8px;
+  position: relative;
+  z-index: 10;
+}
+.slick-slider .slick-next{
+  right:-30px;
+}
+.slick-slider .slick-next::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  font-size:30px;
+  color:#bf0606;
+  right: 15px;
+  position: relative;
+  z-index: 10;
+}
+.slick-slide {
+  color: #333;
+  padding: 40px 0;
+  font-size: 1.25em;
+  font-family: "Verdana";
+  text-align: center;
+  pointer-events: none;
+}
+
+.slick-slide .desc {
+  opacity: 0;
+}
+
+.slick-slide .desc>* {
+  transition: all 900ms ease;
+}
+
+.slick-slide .desc h2 {
+  position: relative;
+  left: 50px;
+  line-height: 1;
+}
+.slick-slide .desc h2 span{
+  color:#bf0606;
+}
+.slick-slide .desc p {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-dots {
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 1px;
+  background: #ccc;
+  margin: 10px 5px;
+  width: 40px;
+  height: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+  background: #bf0606;
+}
+
+.slick-dots button {
+  display: none;
+}
+.slick-slide {
+  opacity: 0.2;
+  transition: all 300ms ease;
+}
+
+.slick-current {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.slick-current .desc {
+  opacity: 1;
+}
+
+.slick-current .desc h2 {
+  left: 0; 
+}
+
+.slick-current .desc p {
+  top: 0;
+  opacity: 1;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid #bf0606;
+  text-decoration: none;
+  color: #bf0606;
+  font-size: .6em;
+  text-transform: uppercase;
+  display: block;
+  margin: 30px auto 0;
+  max-width: 100px;
+  width: 100%;
+  font-weight: bold;
+  pointer-events: initial;
+}
