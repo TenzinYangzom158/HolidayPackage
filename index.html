@@ -4,6 +4,7 @@
   <head>
     <title>Holiday Packages</title>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -44,7 +45,7 @@
         </p>
       </section>
 
-      <section class="slider">
+      <section id="tours" class="slider">
         <div>
           <img src="img/coorg.jpg" alt="coorg">
           <div class="desc">
@@ -99,6 +100,19 @@
           </div>
         </div> 
       </section> 
+
+      <section id="travelblog" class="wrapper center margin-v-lg padding-v-lg">
+        <h1>Explore Travel Blog</h1>
+        <!--An iframe with a thin black border:-->
+        <p>Tour my India blog</p>
+        <iframe src="https://www.tourmyindia.com/blog/" width="100%" height="300" style="border:1px solid black;">
+        </iframe>
+      </section>
+
+      <section id="imgview360">
+        <div id="panorama-360-view"></div>
+      </section>
+
       <!--
 
       <section id="tours" class="padding-v-lg">
@@ -193,6 +207,16 @@
     $(window).on( 'resize', createSlick );
 
     </script>
+
+    <!-- Pannellum library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+    integrity="sha512-UoT/Ca6+2kRekuB1IDZgwtDt0ZUfsweWmyNhMqhG4hpnf7sFnhrLrO0zHJr2vFp7eZEvJ3FN58dhVx+YMJMt2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"
+    integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- End Pannellum library -->
+    <script src="main.js"></script>
 
   </body>
 </html>

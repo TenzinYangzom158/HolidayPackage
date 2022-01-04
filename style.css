@@ -150,7 +150,7 @@ main {
   }
 }
 
-#tours {
+/* #tours {
   background-image: linear-gradient(
       -20deg,
       rgba(11, 82, 100, 0.5) 20%,
@@ -158,7 +158,7 @@ main {
     ), 
     url(img/tour_sand.jpeg);
   background-size: cover;
-}
+} */
 
 @media (max-width: 767px) {
   #tours .flexbox {
@@ -529,7 +529,7 @@ label {
   padding: 10px 20px;
   border: 2px solid #bf0606;
   text-decoration: none;
-  color: #bf0606;
+  color: black;
   font-size: .6em;
   text-transform: uppercase;
   display: block;
@@ -538,4 +538,16 @@ label {
   width: 100%;
   font-weight: bold;
   pointer-events: initial;
+}
+
+
+.btn:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* 360 view */
+#panorama-360-view {
+  width: 100vw;
+  height: 100vh;
 }
