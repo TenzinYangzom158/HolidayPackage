@@ -48,7 +48,7 @@ checkUserName = () => {
   const userNameVal = userName.value.trim();
 
   if (userNameVal === "") {
-    return error(userName, "Username cannot be empty \n" + showSuggestions());
+    return error(userName, "Username is required \n" + showSuggestions());
   } else if (userNameVal.length < 5) {
     return error(userName, "Minimum 5 Charactters \n" + showSuggestions());
   } else {
@@ -83,7 +83,7 @@ checkPassword = () => {
   else {
     return error(
       password,
-      ' between 8-14 char \n min 1 [a-z], \t min 1 [A-Z] \t min 1[0-9]\n min 1(~`!@#$%^&*()-_+={}[]|;:"<>,./?)'
+      ' Password must be between 8-14 characters that include atleast 1 lowercase, 1 uppercase, 1 number and 1 special character'
     );
   }
 };
