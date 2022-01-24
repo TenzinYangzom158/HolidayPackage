@@ -8,8 +8,15 @@
       href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bc4d8abcd3.js"
+      crossorigin="anonymous">
+    </script>
+    <script src="booking.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <nav>
       <ul>
@@ -18,6 +25,7 @@
         <li>Book Now</li>
       </ul>
     </nav>
+
     <header class="background-dark">
       <div class="wrapper center">
         <img class="header-logo center" src="img/holiday_logo.svg" alt="UST logo" />
@@ -28,14 +36,117 @@
       </div>
       <img class="house" src="img/house.svg" alt="house graphic" />
     </header>
+
     <main class="wrapper center">
       <form
+        id="form"
         name="book"
         method="POST"
         data-netlify="true"
-        class="center margin-v-lg padding-v-lg"
+        class="center margin-v-lg padding-v-lg form"
+        onsubmit="validateForm(event)"
       >
-        <div class="form-field">
+
+        <div class="form-control">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            id="firstname"
+            placeholder="eg: tenzin"
+            onkeypress="return onlyChar (event)"
+            onkeyup=" checkName('firstname')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Yangzom"
+            onkeypress="return onlyChar (event)"
+            onkeyup=" checkName('lastname')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="tenzinYangzom22"
+            onkeyup="checkUserName ()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+            onkeyup="checkEmail()"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div> 
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input
+            type="text"
+            id="password"
+            placeholder="Password"
+            onkeyup="checkPassword()"
+            autocomplete="off"
+          />
+
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Re-Enter Password"
+            onkeyup="confirmPassword()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="phoneno">Phone No</label>
+          <input
+            type="text"
+            id="phoneno"
+            placeholder="eg: 9876543212"
+            onkeypress="return onlyDigits (event)"
+            onkeyup="checkPhoneNo()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+      <button type = "submit" class="button" formaction="payment.html">Book My Tour</button>
+    
+        <!-- <div class="form-field">
           <label for="first_name">First Name</label>
           <input
             class="form-input"
@@ -43,7 +154,8 @@
             name="first_name"
             id="first_name"
           />
-        </div>
+        </div> 
+
         <div class="form-field">
           <label for="last_name">Last Name</label>
           <input
@@ -67,7 +179,7 @@
           </select>
         </div>
         <div class="form-field">
-          <a href="payment.html" class="button"> Book Now </a>
+          <a href="payment.html" class="button"> Book Now </a> -->
             
          <!-- <button type="submit" class="button" formaction="payment.html">Book My Tour</button> -->
         </div>
