@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html ng-controller="homeCtrl">
+  
+  <head>
+    <title>Holiday Packages</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <header class="background-dark">
+      <div class="wrapper center">
+        <img class="header-logo center" src="img/holiday_logo.svg" alt="holiday logo" />
+        <h1>Holiday Tour Packages</h1>
+        <p class="lead center max-line-length">
+          India is rightfully regarded as one of the most strikingly beautiful countries in the world. 
+          <strong>Explore India Packages…</strong>!
+        </p>
+      </div>
+      <img class="house" src="img/house.svg" alt="house graphic" /> 
+    </header>
+
+    <p>{{message}}</p>
+
+    <main>
+      <section id="about" class="wrapper center margin-v-lg padding-v-lg">
+        <h2 class="text-dark">About</h2>
+        <p class="max-line-length">
+          <strong class="lead text-medium">Our tours are the best in the world</strong>. 
+          India is so geographically varied that every travel enthusiast in the world would love to take India tour at least once in their lifetime. 
+          From lush green forests to daunting deserts, pristine beaches to mighty snow-capped mountains, from Chardham of North to Meenakshi of Madurai. 
+          India is rich with varied landscapes; each one more attractive than the other.
+        </p>
+        <p class="max-line-length">
+          Apart from the geographical undulations, the diversity in the culture, food, language and even flora and fauna found in the various regions of 
+          India is quite fascinating. This affluence is the reason why <strong class="lead text-medium">India holiday packages</strong> are so popular.
+
+          
+        </p>
+      </section>
+
+      <section id="tours" class="slider">
+        <div>
+          <img src="img/coorg.jpg" alt="coorg">
+          <div class="desc">
+            <h2><span>Coorg</span></h2>
+            <p>₹289.99 - ₹299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/meghalaya.jpg" alt="meghalaya">
+          <div class="desc">
+            <h2><span>meghalaya</span> </h2>
+            <p>₹299.99 - ₹329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/ooty.jpg" alt="ooty">
+          <div class="desc">
+            <h2><span>ooty</span> </h2>
+            <p>₹289.99 - ₹299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/dhasa.jpg" alt="dhasa">
+          <div class="desc">
+            <h2><span>dhasa</span> </h2>
+            <p>₹299.99 - ₹329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/pondi.jpg" alt="pondi">
+          <div class="desc">
+            <h2><span>pondi</span> </h2>
+            <p>₹289.99 - ₹299.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      
+        <div>
+          <img src="img/goa.jpg" alt="goa">
+          <div class="desc">
+            <h2><span>goa</span></h2>
+            <p>₹299.99 - ₹329.99</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div> 
+      </section> 
+
+      <section id="travelblog" class="wrapper center margin-v-lg padding-v-lg">
+        <h2>Explore Travel Blog</h2>
+        <!--An iframe with a thin black border:-->
+        <p>Tour my India blog</p>
+        <iframe src="https://www.tourmyindia.com/blog/" width="100%" height="300" style="border:1px solid black;">
+        </iframe>
+      </section>
+
+      <section id="imgview360">
+        <div id="panorama-360-view"></div>
+      </section>
+
+      <!--
+
+      <section id="tours" class="padding-v-lg">
+        <div class="wrapper center">
+          <h2 class="text-dark">Tour Packages</h2>
+          <ul role="list" class="list-unstyled flexbox flexbox-3col">
+
+            <li class="card">
+              <div
+                class="card__img"
+                style="background-image: url('img/goa.jpg')"
+              ></div>
+              <div class="card__content">
+                <h3 class="text-dark">Goa <span>Rs.9999</span></h3>
+                <p>
+                  Et tempora doloremque et repellendus minus et corporis officiis non nobis molestiae 33 sunt quam. Ut galisum o !
+                </p>
+                <a href="booking.html" class="button">Book the Goa Package</a>
+              </div>
+            </li>
+
+            <li class="card">
+              <div
+                class="card__img"
+                style="background-image: url('img/coorg.jpg')"
+              ></div>
+              <div class="card__content">
+                <h3 class="text-dark">Coorg <span>Rs.3999</span></h3>
+                <p>
+                  Et tempora doloremque et repellendus minus et corporis officiis non nobis molestiae 33 sunt quam. Ut galisum o !
+                </p>
+                <a href="booking.html" class="button">Book the Coorg Package</a>
+              </div>
+            </li>
+
+            <li class="card">
+              <div
+                class="card__img"
+                style="background-image: url('img/manali.jfif')"
+              ></div>
+              <div class="card__content">
+                <h3 class="text-dark">Manali <span>Rs.7899</span></h3>
+                <p>
+                  Et tempora doloremque et repellendus minus et corporis officiis non nobis molestiae 33 sunt quam. Ut galisum o !
+                </p>
+                <a href="booking.html" class="button"> Book the Manali Package </a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+    -->
+
+    </main>
+
+    <div class="background-black padding-v-md">
+      <footer class="wrapper center flexbox flexbox--aligncenter">
+        <!-- <img src="img/logo.svg" alt="Holiday Packages Tours" />  -->
+        <p class="margin-v-0">&copy; 2021 Holiday Package Tours</p>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+    <script>
+      function createSlick(){  
+
+      $(".slider").not('.slick-initialized').slick({
+        centerMode: true,
+          autoplay: true,
+          dots: true, 
+            arrows: true,
+          slidesToShow: 3,
+          responsive: [{ 
+              breakpoint: 768,
+              settings: {
+                  dots: false,
+                  arrows: false,
+                  infinite: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              } 
+          }]
+      });	
+
+    } 
+    createSlick();
+
+    //Will not throw error, even if called multiple times.
+    $(window).on( 'resize', createSlick );
+
+    </script>
+
+    <!-- Pannellum library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+    integrity="sha512-UoT/Ca6+2kRekuB1IDZgwtDt0ZUfsweWmyNhMqhG4hpnf7sFnhrLrO0zHJr2vFp7eZEvJ3FN58dhVx+YMJMt2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"
+    integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- End Pannellum library -->
+
+    <script src="main.js"></script>
+    <script src="spa.js"></script>
+
+  </body>
+</html>

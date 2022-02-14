@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>Holiday Packages</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </nav>
+  -->
+
+    <header class="background-dark">
+      <div class="wrapper center">
+        <img class="header-logo center" src="img/holiday_logo.svg" alt="holiday logo" />
+        <h1>Holiday Tour Packages</h1>
+        <p class="lead center max-line-length">
+          India is rightfully regarded as one of the most strikingly beautiful countries in the world. 
+          <strong>Explore India Packages…</strong>!
+        </p>
+      </div>
+      <img class="house" src="img/house.svg" alt="house graphic" /> 
+    </header>
+
+    <main>
+      <section id="about" class="wrapper center margin-v-lg padding-v-lg">
+        <h2 class="text-dark"> Admin Page</h2>
+      </section>
+
+      <section id="admin_page" class="wrapper center margin-v-lg padding-v-lg">
+        <div class="container" style="padding-top:5px;">   
+            <div class="menu">
+                
+                <button id="showbtn" class="btns">Package Details</button>
+                <button id="addbtn" class="btns">Add New Package Details</button>
+                <button id="delbtn" class="btns">Delete</button>
+                <button id="changebtn" class="btns">Change ID</button>
+    
+            </div>
+    
+            <div class="packagedetails">            
+                <table id="tbl" class="text-dark" style="transform: translate(0px,20px);margin-left: 200px;">
+                </table>
+            </div>
+    
+            <div id="overlayform" style="display: none; padding-top: 40px; box-sizing: border-box;margin-left: 400px;" class="overlay">
+                 <div class="wrap">
+                    <h2 style="margin-left:-30px;font-weight: lighter;margin-left: -400px;"><center>Add New Package Details</center></h2>
+                    <form style="border: 1px solid black;padding: 70px;width:500px; background-color: rgb(149, 204, 240);" id="xmlform" class="jsform" onsubmit="return false">          
+                        <input type="text" id="id" placeholder="Package id"><br><br>
+                        <input type="text" id="date" placeholder="Enter Date"><br><br>
+                        <input type="text" id="price" placeholder="Price"><br><br>
+                        <input type="text" id="duration" placeholder="Enter Duration"><br><br>
+                        <input type="text" id="dept_city" placeholder="Enter Departure City"><br><br>
+                        <input type="text" id="dept_city" placeholder="Enter Destination City"><br><br><br>
+
+                       
+                        <button style="background-color: #83b6f0;width:370px;height: 40px;border: none;cursor: pointer; " id="submitbtn"class="frmbtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    </main>
+
+  
+<script src="spa.js"></script>
+
+    <div class="background-black padding-v-md">
+        <footer class="wrapper center flexbox flexbox--aligncenter">
+        <!-- <img src="img/logo.svg" alt="Holiday Packages Tours" />  -->
+        <p class="margin-v-0">&copy; 2021 Holiday Package Tours</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+
+    
+  </body>
+</html>

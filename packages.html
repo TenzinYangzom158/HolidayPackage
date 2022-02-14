@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Json</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="packagesCtrl">
+    <!--
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-light" href="#">Packages</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="#/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light" href="#/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#/package">Packages</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    -->
+
+    <div class="m-2">
+        <div class="row">
+            <div class="col">
+                <label for="rowsToBeDisplayed">Display:</label>
+                <input type="number" class="form-control rounded w-50" step="1" min="0" max="10" ng-model="rowlimit" placeholder="Number of rows to be displayed...">
+            </div>
+            <div class="col">
+                <label for="searchPackage">Search Package:</label>
+                <input type="text" class="form-control rounded w-75" 
+                ng-model="searchPackage" 
+                placeholder="Search Package by id, duration, departure and destination city" placeholder="Search">
+            </div>
+        </div>
+        
+    </div>
+
+     <table cellpadding="2" cellspacing="2" border="2" class="table table-striped table-dark table-hover table-sm">
+         <thead>
+                <tr>
+                    <th><input type="search" class="form-control rounded" placeholder="Search id" aria-label="Search" aria-describedby="search-addon" ng-model="search.id" /></th>
+                    <th><input type="search" class="form-control rounded" placeholder="Search date" aria-label="Search" aria-describedby="search-addon" ng-model="search.date" /></th>
+                    <th><input type="search" class="form-control rounded" placeholder="Search duration" aria-label="Search" aria-describedby="search-addon" ng-model="search.duration" /></th>
+                    <th><input type="search" class="form-control rounded" placeholder="Search price" aria-label="Search" aria-describedby="search-addon" ng-model="search.price" /></th>
+                    <th><input type="search" class="form-control rounded" placeholder="Search departure city" aria-label="Search" aria-describedby="search-addon" ng-model="search.dept_city" /></th>
+                    <th><input type="search" class="form-control rounded" placeholder="Search destination" aria-label="Search" aria-describedby="search-addon" ng-model="search.dest_city" /></th>
+                </tr>
+             
+         <tr>
+             <!-- Sort an Array Based on User Input -->
+             <th scope="col" ng-click="orderByMe('id')">ID</th>
+             <th scope="col" ng-click="orderByMe('date')">DATE</th>
+             <th scope="col" ng-click="orderByMe('duration')">DURATION</th>
+             <th scope="col" ng-click="orderByMe('price')">PRICE</th>
+             <th scope="col" ng-click="orderByMe('dept_city)">DEPARTURE</th>
+             <th scope="col" ng-click="orderByMe('dest_city')">DESTINATION</th> 
+         </tr>
+         </thead>
+         <tbody>
+
+         <!-- <tr ng-repeat="x in myData | limitTo:rowlimit | orderBy:'age' | filter:searchId | orderBy:myOrderBy"> -->
+        <tr ng-repeat="x in myData | limitTo:rowlimit |  filter:searchPackage | orderBy:myOrderBy | filter:search">
+             <td scope="row">{{x.id | number:1}}</td>
+             <td>{{x.date | date:"dd/MM/yyyy"}}</td>
+             <td>{{x.duration | dayFilter}}</td>
+             <td>{{x.price | currency : "₹ "}}</td>
+             <td>{{x.dept_city | myfilter}}</td>
+             <td>{{x.dest_city | myfilter}}</td>
+         </tr>
+         </tbody>
+
+     </table>
+
+    
+    <script src="spa.js"></script>
+</body>
+</html>
